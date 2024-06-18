@@ -1,0 +1,358 @@
+a {
+  text-decoration: none !important;
+}
+
+.imageHolder {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 103, 184, 1) 35%,
+    rgba(0, 219, 255, 1) 100%
+  );
+}
+
+.special-bg {
+  border: 2px solid #0067b8;
+  padding: 20px 60px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.special-w-bg {
+  border: 2px solid white;
+  padding: 20px 60px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.subscribeBtn {
+  border: 2px solid white;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.special-bg,
+.subscribeBtn,
+.special-w-bg:hover {
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.blueBg {
+  background-color: #0067b8;
+}
+.blueTxt {
+  color: #0067b8;
+}
+
+.tracksBoxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 1em;
+}
+
+.tracksBoxes img {
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.textStyle {
+  text-align: center;
+  line-height: 1.8em;
+}
+
+.triangle {
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid #0067b8;
+}
+
+.more-info {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hover\:show-info:hover .more-info {
+  display: block;
+  opacity: 1;
+}
+
+.inDemandContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.tracksContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.inDemandContainer,
+.tracksContainer img {
+  border-radius: 20px;
+}
+
+.adminDashboard {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+}
+
+.adminDashboard div {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #0067b8;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.adminDashboard div:hover {
+  background-color: #0067b8;
+  color: rgb(221, 221, 221);
+}
+
+.adminDashboard p {
+  text-align: center;
+}
+
+.adminDashboard #dashIcon {
+  font-size: xx-large;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+.react-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.react-table th,
+.react-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.react-table th {
+  background-color: #f7f7f7;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.react-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.react-table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+/* style scrollbar */
+.prompt::-webkit-scrollbar {
+  width: 1px !important;
+  height: 10px;
+  cursor: pointer;
+}
+
+.prompt::-webkit-scrollbar-thumb {
+  background-color: rgb(189, 187, 187);
+  border-radius: 50px;
+  width: 1px;
+  height: 1px;
+}
+/* Styling for the pop-up page */
+.pop-up-page {
+  position: relative;
+  height: 100vh;
+  width: 60%;
+  margin: auto;
+  overflow-y: scroll;
+  background-color: black;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* z-index: 9; */
+}
+
+/* Styling for the overlay */
+.pop-up-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Hide the scrollbar for the overlay */
+.pop-up-overlay::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Hide the scrollbar for the pop-up */
+.pop-up-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Style the scrollbar track for the pop-up */
+.pop-up-page::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Style the scrollbar thumb for the pop-up */
+.pop-up-page::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+/* Hide the scrollbar for other browsers */
+.pop-up-overlay {
+  scrollbar-width: none;
+}
+
+.pop-up-page {
+  scrollbar-width: thin;
+}
+
+/* Add this CSS rule */
+.pop-up-content {
+  overflow: auto;
+  height: 100%; /* Ensure the pop-up content takes up the full height */
+}
+
+/* Styling for the pop-up page */
+.pop-up-page {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling for the overlay */
+.pop-up-overlay {
+  position: fixed;
+  z-index: 1;
+  overflow: hidden; /* Prevent scrolling on the background content */
+}
+
+.pop-up-page {
+  height: 75vh;
+  width: 90%;
+  margin: auto;
+}
+
+@media (max-width: 1500px) {
+  .inDemandContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .adminDashboard {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .inDemandContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1080px) {
+  .tracksContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .adminDashboard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .inDemandContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .tracksContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .adminDashboard {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 767px) {
+  .textStyle {
+    text-align: start;
+  }
+}
+
+@media (max-width: 500px) {
+  .prompt::-webkit-scrollbar {
+    display: none;
+  }
+
+  .prompt {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .tracksContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .adminDashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 416px) {
+  .inDemandContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 345px) {
+  .adminDashboard {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
