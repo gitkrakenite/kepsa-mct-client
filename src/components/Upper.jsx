@@ -1,27 +1,22 @@
-import Learn3 from "../assets/l3.png";
-import Learn7 from "../assets/l7.png";
-import Learn8 from "../assets/l8.png";
-import Learn9 from "../assets/l9.png";
 import Micr from "../assets/microsoft.png";
 import Kepsa from "../assets/KEPSA.png";
-
-import Students from "../assets/students.jpg";
+import startUp from "../assets/startUp.png";
 
 const Upper = () => {
   return (
-    <div className=" px-[10px] md:px-[2em]  xl:px-[5em] mt-[80px]  md:mt-[130px] ">
-      <div className="flex flex-col justify-center lg:flex-row gap-[30px] md:gap-[50px]">
+    <div className=" px-[10px] md:px-[2em]  xl:px-[5em] mt-[80px]  md:mt-[38px] ">
+      <div className="flex flex-col justify-around items-center lg:flex-row gap-[30px] md:gap-[50px]">
         {/* txtside */}
-        <div className="flex-[0.5] w-full relative">
-          <div className="hidden md:block h-[40px] w-[40px] triangle absolute  top-0 right-0 left-0 rotate-in-center" />
-          <div className="h-[60px] w-[60px] blueBg  absolute  top-0 right-0 rounded-lg hidden md:block slide-in-top" />
-          <div className=" hidden md:block h-[50px] w-[50px] absolute blueBg bottom-0 left-0 rounded-full scale-in-center" />
+        <div className="flex-[0.3] w-full relative ">
+          <div className="hidden xl:block h-[40px] w-[40px] triangle absolute  top-0 right-0 left-[-3em] rotate-in-center" />
+          <div className="h-[60px] w-[60px] blueBg  absolute  top-0 right-[-8em] rounded-lg hidden md:block slide-in-top" />
+          <div className=" hidden xl:block h-[50px] w-[50px] absolute blueBg bottom-0 left-[-3em] rounded-full scale-in-center" />
           {/* upper DSEAP part */}
           <div className=" w-full ">
             <div className="mb-[10px]">
               <div>
                 <h2
-                  className="text-5xl text-zinc-600  mb-3 text-center"
+                  className="text-6xl text-zinc-600  mb-3 text-center"
                   style={{ fontWeight: 700 }}
                 >
                   DSEAP
@@ -36,24 +31,31 @@ const Upper = () => {
               </div>
             </div>
 
-            <div className="mb-[10px] text-center">
-              <h6>Elevate Through Education</h6>
-              <h6>#pavingtheway</h6>
+            <p className="font-semibold text-xl text-center mt-8">
+              Chart your course. Learn AI today.
+            </p>
+            <p className="mt-[-1em] mb-[0.7em] text-center">
+              Unlock new opportunities with AI skills that are in demand now and
+              in
+            </p>
+          </div>
+
+          <div className="mb-[0.7em]">
+            <div className="flex w-full justify-center mb-7">
+              <a
+                href="https://kepsa-dseap.azurefd.net/"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-[#0067b8] text-white px-8 xl:px-16 py-3 rounded-md mt-4 text-xl text-center "
+              >
+                Get Started Today
+              </a>
             </div>
           </div>
-          <p className="mb-[40px] mt-5 text-center">
-            At DSEAP, we believe education should be a thrilling adventure for
-            everyone. Our mission? To supercharge your life with essential
-            digital skills, setting you on a path of endless possibilities and
-            exciting growth. Join us as we champion the transformative power of
-            learning and pave the way to a brighter future, one digital skill at
-            a time.
-          </p>
 
           {/* partners */}
-          <div className=" mb-4 sm:mb-0">
-            {/* <h2 className="text-center">In Collaboration</h2> */}
-            <div className="flex justify-center items-center gap-10 mt-3">
+          <div className="  sm:mb-0">
+            <div className="flex items-center justify-center gap-10 mt-3">
               <img
                 src={Kepsa}
                 alt="kepsa"
@@ -64,11 +66,13 @@ const Upper = () => {
                 src={Micr}
                 alt="microsoft"
                 className="h-[120px] object-contain"
+                loading="lazy"
               />
             </div>
           </div>
+
           {/* desktop version */}
-          <div className="hidden sm:flex justify-center gap-3 my-4">
+          {/* <div className="hidden sm:flex justify-center gap-3 my-4">
             <div>
               <p className="font-semibold">Available Tracks</p>
               <p className="font-bold text-lg text-center">4</p>
@@ -88,9 +92,9 @@ const Upper = () => {
               <p className="font-semibold">Mode Of Learning</p>
               <p className="font-bold text-lg text-center">Virtual</p>
             </div>
-          </div>
+          </div> */}
           {/* mobile version */}
-          <div className=" grid grid-cols-2 gap-2 sm:hidden  w-full">
+          {/* <div className=" grid grid-cols-2 gap-2 sm:hidden  w-full">
             <div className="w-full text-center mb-14">
               <div className="flex w-full justify-center mb-4">
                 <img loading="lazy" src={Learn3} alt="" className="w-[120px]" />
@@ -122,16 +126,21 @@ const Upper = () => {
               <p className="font-semibold">Mode Of Learning</p>
               <p className="font-bold text-lg text-center">Virtual</p>
             </div>
-          </div>
+          </div> */}
         </div>
-
         {/* imgside */}
-        <div className=" flex-[0.5] lg:flex-[0.4] relative   flex justify-center sm:justify-start">
-          <img
+        <div className=" flex-[0.5] lg:flex-[0.5] relative  ">
+          {/* <img
             src={Students}
             alt=""
             loading="lazy"
             className=" object-cover rounded-lg imageHolder"
+          /> */}
+          <img
+            src={startUp}
+            alt=""
+            className=" w-[500px] xl:w-full h-full  object-contain"
+            loading="lazy"
           />
         </div>
       </div>

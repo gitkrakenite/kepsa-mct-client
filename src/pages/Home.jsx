@@ -1,48 +1,62 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import Hero from "../components/hero/Hero";
 import Upper from "../components/Upper";
 import Values from "../components/Values";
-import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import Tracks from "../components/Tracks";
-import Heights from "../components/Heights";
-import Vision from "../components/Vision";
 import Offer from "../components/Offer";
-import Subscription from "../components/Subscription";
-import InDemand from "../components/InDemand";
-import Footer from "../components/Footer";
-import About from "../components/About";
-import Partners from "../components/Partners";
+import TopStrip from "../components/TopStrip";
+import { AiOutlineArrowUp } from "react-icons/ai";
+
 const Home = () => {
+  // scroll to top functionality
+  const [showArrow, setShowArrow] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 300) {
+        setShowArrow(true);
+      } else {
+        setShowArrow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div>
+      {/* arrow to scroll to top */}
+      {showArrow && (
+        <div
+          className="fixed bottom-20 right-4 text-3xl z-[999] cursor-pointer bg-[#0067b8] text-zinc-50 rounded-full p-[5px]"
+          onClick={handleScrollTop}
+        >
+          <AiOutlineArrowUp />
+        </div>
+      )}
       <Navbar />
-      <Upper />
-      {/* <Partners /> */}
-      <Heights />
-      <div id="about">
-        <About />
+      <div className="hidden md:block">
+        <TopStrip />
       </div>
-      {/* <Vision /> */}
-      <Offer />
-      <Values />
+      <Upper />
+
       <div id="tracks">
         <Tracks />
       </div>
-      <Hero />
-
-      <InDemand />
-
-      <div id="testimonials">
-        <Testimonials />
-      </div>
-      <Subscription />
+      <Offer />
+      <Values />
 
       <div id="contact">
         <Contact />
       </div>
-      <Footer />
     </div>
   );
 };

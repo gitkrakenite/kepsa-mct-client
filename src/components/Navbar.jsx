@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-// import { motion } from "framer-motion";
-// import Logo from "../assets/mc.png";
+
 import Logo from "../assets/kyeep.png";
 import { Link, useNavigate } from "react-router-dom";
+import ReactGA from "react-ga4";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -13,13 +13,13 @@ const Navbar = () => {
 
   const Navlinks = [
     { id: 1, title: "Home", goTo: "/" },
-    { id: 2, title: "About Us", goTo: "about" },
-    { id: 3, title: "Tracks", goTo: "tracks" },
-    { id: 4, title: "Testimonials", goTo: "testimonials" },
+    // { id: 2, title: "About Us", goTo: "about" },
+    { id: 3, title: "Explore", goTo: "tracks" },
+    // { id: 4, title: "Testimonials", goTo: "testimonials" },
 
     {
       id: 5,
-      title: "Platform Access",
+      title: "Start Learning",
       goTo: "https://kepsa-dseap.azurefd.net/",
     },
     { id: 6, title: "Contact", goTo: "contact" },
@@ -42,6 +42,12 @@ const Navbar = () => {
     } else if (item.goTo === "contact") {
       document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
     } else if (item.goTo.startsWith("http")) {
+      // Send a custom event
+      ReactGA.event({
+        category: "Access MCT",
+        action: "clicked MCT",
+        label: "Navbar Clicked", // optional
+      });
       window.location.href = item.goTo;
     } else {
       navigate(item.goTo);

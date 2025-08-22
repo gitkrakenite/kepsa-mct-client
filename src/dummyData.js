@@ -1,135 +1,114 @@
-export const DummyTracks = [
+import Azure from "./assets/navigator/azure.png";
+import Copilot from "./assets/navigator/copilot.jpg";
+import Cyber from "./assets/navigator/cybersecurity.jpg";
+import Data from "./assets/navigator/data.jpg";
+import Dev from "./assets/navigator/dev.png";
+import Ethics from "./assets/navigator/ethics.jpg";
+import Fluency from "./assets/navigator/fluency.png";
+import Passport from "./assets/navigator/passport.jpg";
+import Productivity from "./assets/navigator/productivity.jpg";
+import Photo1 from "./assets/navigator/photo1.png";
+import Photo2 from "./assets/navigator/photo2.png";
+import Photo3 from "./assets/navigator/photo3.jpg";
+
+export const ByTopic = [
   {
-    id: 1,
-    title: "Generative AI",
-    photo:
-      "https://images.pexels.com/photos/17485607/pexels-photo-17485607/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-represents-ai-assitance-in-the-control-systems-needed-to-create-fusion-energy-it-was-created-by-khyati-trehan-as-part.png?auto=compress&cs=tinysrgb&w=400",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    tag: "Generative AI Productivity",
+    title: "AI Skills Passport",
+    desc: "Learn how to futureproof your career with AI",
+    photo: Passport,
   },
   {
-    id: 2,
-    title: "Cyber Security",
-    photo:
-      "https://images.pexels.com/photos/2036656/pexels-photo-2036656.jpeg?auto=compress&cs=tinysrgb&w=400",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    tag: "Generative AI Basics",
+    title: "Career Essentials in Generative AI",
+    desc: "Learn essential skills in generative AI, brought to you by Microsoft and LinkedIn",
+    photo: Fluency,
   },
   {
-    id: 3,
-    title: "Cloud Computing",
-    photo:
-      "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg?auto=compress&cs=tinysrgb&w=400",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    tag: "Generative AI Ethics",
+    title: "Generative AI and Ethics",
+    desc: "Explore the ethical implications of generative AI and understand the urgency of addressing these challenges.",
+    photo: Ethics,
   },
   {
-    id: 4,
-    title: "Sustainability",
-    photo:
-      "https://images.pexels.com/photos/1173777/pexels-photo-1173777.jpeg?auto=compress&cs=tinysrgb&w=400",
-    description:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    tag: "Generative AI Productivity",
+    title: "Build Your Generative AI Productivity Skills",
+    desc: "Enhance your productivity skills with generative AI, provided by Microsoft and LinkedIn.",
+    photo: Productivity,
+  },
+  {
+    tag: "Cybersecurity",
+    title: "Career Essentials in Cybersecurity",
+    desc: "Discover the skills needed for a career in cybersecurity.",
+    photo: Cyber,
+  },
+  {
+    tag: "Data Analytics",
+    title: "Career Essentials in Data Analysis by Microsoft and LinkedIn",
+    desc: "Explore the ethical implications of generative AI and understand the urgency of addressing these challenges.",
+    photo: Data,
+  },
+  {
+    tag: "AI Tools and Applications",
+    title: "Microsoft Azure AI Fundamentals",
+    desc: "Artificial Intelligence (AI) empowers amazing new solutions and experiences; and Microsoft Azure provides easy to use services to help you get started.",
+    photo: Azure,
+  },
+  {
+    tag: "Github Copilot",
+    title: "Accelerate app development by using Github Copilot",
+    desc: "Learn how Github Copilot can help you write code faster and more efficiently.",
+    photo: Copilot,
   },
 ];
 
-export const InDemandSkills = [
+export const ByRole = [
   {
-    id: 1,
-    title: "Administrative Professional",
-    photo:
-      "https://img.freepik.com/free-photo/industrial-designer-working-3d-model_23-2149370130.jpg?t=st=1716549059~exp=1716552659~hmac=0521ecc8cf0040b1900fc4aa4260a7fda3e341a6e6ee7c52904981cf1d9310fc&w=1380",
-    description:
-      "Develop essential skills needed for administrative roles, including communication, writing, time management, and must-have software skills.",
+    tag: "Organization Leader",
+    title: "AI for Managers by Microsoft and LinkedIn",
+    desc: "Managers at all levels of the organization will lean practical ways to enhance their effectiveness with generative AI.",
+    photo: Photo1,
   },
   {
-    id: 2,
-    title: "Project Manager",
-    photo:
-      "https://img.freepik.com/free-photo/businessman-presenting-his-project-colleagues_23-2149286108.jpg?t=st=1716549612~exp=1716553212~hmac=130cae888b171db0a43aaa5f638d3ca4580f701eaefe8713342b6da3ffca958f&w=1380",
-    description:
-      "Discover how to manage projects effectively with scheduling, budgeting, and communication, and explore PM tools in Microsoft 365.",
+    tag: "Organization Leader",
+    title: "AI for Organizational Leaders",
+    desc: "Equip yourself with AI knowledge to lead your organization into the future.",
+    photo: Photo2,
   },
   {
-    id: 3,
-    title: "Business analyst",
-    photo:
-      "https://img.freepik.com/free-photo/office-workers-using-finance-graphs_23-2150408674.jpg?t=st=1716549127~exp=1716552727~hmac=bee4cbfdebbdacc2b1a3afa0c5d83a6619dd47ee5ce9ef1328166f2043e59506&w=1380",
-    description:
-      "Explore foundational business analysis concepts and understand key processes. Practice using software tools for common business analysis tasks.",
+    tag: "Everyone",
+    title: "Micorosoft Copilot for Productivity",
+    desc: "Improve your productivity with Microsoft Copilot, designed to assist you in everyday tasks.",
+    photo: Photo3,
   },
   {
-    id: 4,
-    title: "Systems administrator",
-    photo:
-      "https://img.freepik.com/free-photo/young-woman-using-laptop-home_482257-76529.jpg?t=st=1716549239~exp=1716552839~hmac=a814087000a85e9cb7920dd6b85dfd7a14d294ac73a9c8cc4494ece5fbfc5787&w=1380",
-    description:
-      "Learn about this multifaceted role — from managing on-site, cloud, physical, and virtual implementations, as well as storage security.",
+    tag: "Trainer",
+    title: "Intro to Generative AI for Trainers",
+    desc: "Equip yourself with the knowledge to train others in generative AI.",
+    photo: Data,
   },
   {
-    id: 5,
-    title: "Data analyst",
-    photo:
-      "https://img.freepik.com/free-photo/concentrated-young-african-man-sitting-coworking_171337-13496.jpg?t=st=1716549177~exp=1716552777~hmac=0f12310db2642fb8508d048859619564ac00f769cc4d7f14e23a5945454f4f03&w=1380",
-    description:
-      "Explore foundational concepts used in data analysis and practice using software tools for data analytics and data visualization. ",
+    tag: "Public Sector Employees",
+    title: "AI in the Public Sector",
+    desc: "Explore and start imagining how AI can help your public sector organization.",
+    photo: Dev,
   },
   {
-    id: 5,
-    title: "Software Developer",
-    photo:
-      "https://img.freepik.com/free-photo/level-design-department-employee-wearing-wireless-headphones-while-analyzing-digital-environment-digital-artist-office-workspace-sitting-desk-while-working-game-interface_482257-43889.jpg?t=st=1716549255~exp=1716552855~hmac=9119dc9fc1ae9966195b1ca3334f004c609dac16be99a5904d4f11e18308efc8&w=1380",
-    description:
-      "Understand the core concepts and structure of programming languages and learn how they’re applied.",
+    tag: "Educators",
+    title: "MSFT Educator academy",
+    desc: "Explore microsoft resources for educators and other school staff.",
+    photo: Azure,
   },
-];
-
-export const Counties = [
-  "Baringo",
-  "Bomet",
-  "Bungoma",
-  "Busia",
-  "Elgeyo/Marakwet",
-  "Embu",
-  "Garissa",
-  "Homa Bay",
-  "Isiolo",
-  "Kajiado",
-  "Kakamega",
-  "Kericho",
-  "Kiambu",
-  "Kilifi",
-  "Kirinyaga",
-  "Kisii",
-  "Kisumu",
-  "Kitui",
-  "Kwale",
-  "Laikipia",
-  "Lamu",
-  "Machakos",
-  "Makueni",
-  "Mandera",
-  "Marsabit",
-  "Meru",
-  "Migori",
-  "Mombasa",
-  "Murang'a",
-  "Nairobi City",
-  "Nakuru",
-  "Nandi",
-  "Narok",
-  "Nyamira",
-  "Nyandarua",
-  "Nyeri",
-  "Samburu",
-  "Siaya",
-  "Taita/Taveta",
-  "Tana River",
-  "Tharaka-Nithi",
-  "Trans Nzoia",
-  "Turkana",
-  "Uasin Gishu",
-  "Vihiga",
-  "Wajir",
-  "West Pokot",
+  {
+    tag: "Developer",
+    title: "Create Copilots with Microsoft Copilot Studio",
+    desc: "Develop your own copilots using the Microsoft Copilot Studio tools.",
+    photo: Copilot,
+  },
+  {
+    tag: "Organization Leader",
+    title: "Tranform Your Business with Microsoft AI",
+    desc: "Learn how to leverage AI to transform and grow your business.",
+    photo: Ethics,
+  },
 ];

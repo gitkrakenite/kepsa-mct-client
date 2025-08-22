@@ -1,5 +1,3 @@
-import React from "react";
-
 const Offer = () => {
   return (
     <div className="blueBg text-white">
